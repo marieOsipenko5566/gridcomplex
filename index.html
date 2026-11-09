@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+    <style type="text/css">
+        header{height:150px; background-color: #E8C5C6;}
+        footer{height:150px; background-color: #E8C5C6;}
+        #container{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            grid-gap:1px;
+            min-height: 250px;
+            height:100vh;
+        }
+        #mainContent{background-color: #ABD;
+            grid-column:1/span 3;
+            grid-row:1/span 2;
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-areas:
+            "box1 box1"
+            "box2 box3"
+            "box4 box4";
+        }
+        #innerHeader{
+            background-color: #FAB1B2;
+            grid-area:box1;
+        }
+        #innerFooter{
+            background-color: #F5CA76;
+            grid-area:box4;
+        }
+        #innerContent1{
+            background-color: #B7C4F6;
+            grid-area:box2;
+        }
+        #innerContent2{
+            background-color: #70F495;
+            grid-area: box3;
+        }
+        #secondaryContent{
+            background-color: #BCA;
+            grid-column:4/span 2;
+            grid-row:1/span 4;
+        }
+        #sidebar{
+            background-color: #DCA;
+            grid-column:1/span 1;
+            grid-row:3/span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <header>logo nav</header>
+    <div id="container">
+        <div id="mainContent">
+            <div id="innerHeader">inner header</div>
+            <div id="innerContent1">inner content 1</div>
+            <div id="innerContent2">inner content 2</div>
+            <div id="innerFooter">inner footer</div>
+        </div>
+        <div id="secondaryContent">secondary content</div>
+        <div id="sidebar">sidebar</div>
+    </div>
+    <footer>footer</footer>
+</body>
+</html>
+
+
+
